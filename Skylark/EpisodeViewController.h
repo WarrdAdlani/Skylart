@@ -11,5 +11,6 @@
 @interface EpisodeViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @property (strong, nonatomic) NSMutableArray *arrEpisodes;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end

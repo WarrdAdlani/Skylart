@@ -20,6 +20,7 @@ typedef void(^SuccessBlock)(id json, NSError *error);
 // Methods/Functions
 -(instancetype)init;
 -(void)getDataWithEndPoint:(NSString *)paramEndPoint withCompletionBlock:(SuccessBlock)successBlock;
+
 -(void)cancelConnection;
 
 @end

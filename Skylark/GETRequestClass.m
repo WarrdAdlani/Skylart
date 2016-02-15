@@ -21,7 +21,6 @@
     self = [super init];
     if (self) {
         // do something
-        responseData = [NSMutableData new];
     }
     return self;
 }
@@ -29,14 +28,16 @@
 -(void)getDataWithEndPoint:(NSString *)paramEndPoint withCompletionBlock:(SuccessBlock)successBlock
 {
     
+    responseData = nil;
+    responseData = [NSMutableData new];
     self.successBlock = successBlock;
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
     
     NSURLSessionConfiguration *defaultConfigObject = [NSURLSessionConfiguration defaultSessionConfiguration];
     
     // Assuming this will all be done on the main queue
-    NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration: defaultConfigObject delegate: self delegateQueue: [NSOperationQueue mainQueue]];
-    NSString *urlAsString = [NSString stringWithFormat:@"http://feature-code-test.skylark-cms.qa.aws.ostmodern.co.uk:8000/api/%@/", paramEndPoint];
+    NSURLSession *defaultSession = [NSURLSession sessionWithConfiguration: defaultConfigObject delegate: self delegateQueue: [NSOperationQueue currentQueue]];
+    NSString *urlAsString = [NSString stringWithFormat:@"http://feature-code-test.skylark-cms.qa.aws.ostmodern.co.uk:8000/%@", paramEndPoint];
     NSURL * url = [NSURL URLWithString:urlAsString];
     NSMutableURLRequest * urlRequest = [NSMutableURLRequest requestWithURL:url];
     [urlRequest setHTTPMethod:@"GET"];
@@ -74,7 +75,8 @@
             id json = [NSJSONSerialization JSONObjectWithData:responseData options:0 error:nil];
             NSLog(@"Dictionary: %@", json);
             
-            if (error) {
+            if (error)
+            {
                 NSLog(@"Error occured during parsring: %@", error.localizedDescription);
                 self.successBlock(nil, error);
             }

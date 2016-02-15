@@ -15,6 +15,7 @@
     NSHTTPURLResponse *httpResponse;
     NSMutableArray *arrContents;
     NSMutableArray *arrEpisodes;
+    UIView *loadingView;
 }
 
 @end
@@ -32,9 +33,22 @@
     [self.navigationController.navigationBar setTitleTextAttributes:
      @{NSForegroundColorAttributeName:[UIColor whiteColor]}];
     
+    loadingView = [[UIView alloc]initWithFrame:self.view.bounds];
+    [loadingView setTranslatesAutoresizingMaskIntoConstraints:YES];
+    UILabel *loadingLabel = [[UILabel alloc]initWithFrame:loadingView.bounds];
+    [loadingLabel setTextAlignment:NSTextAlignmentCenter];
+    [loadingLabel setNumberOfLines:0];
+    [loadingLabel setTextColor:[UIColor whiteColor]];
+    [loadingLabel setTranslatesAutoresizingMaskIntoConstraints:YES];
+    [loadingView addSubview:loadingLabel];
+    [self blurViewUsingView:loadingView];
+    
     self.getRequestObject = [[GETRequestClass alloc]init];
     [self.getRequestObject setDelegate:self];
-    [self.getRequestObject getDataWithEndPoint:@"sets" withCompletionBlock:^(id json, NSError *error) {
+    
+    [self.view addSubview:loadingView];
+    [self.getRequestObject getDataWithEndPoint:@"api/sets/" withCompletionBlock:^(id json, NSError *error)
+    {
         if(error)
         {
             NSLog(@"Error: %@",error.localizedDescription);
@@ -45,6 +59,8 @@
             arrContents = [[NSMutableArray alloc]initWithArray:json[@"objects"]];
             [self.tableView reloadData];
         }
+        
+        [loadingView removeFromSuperview];
     }];
 }
 
@@ -163,38 +179,50 @@
     return 221.0f;
 }
 
--(void)getDataWithEndPoint:(NSString*)paramEndPoint
-{
-    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
-    
-    NSURLSession * session = [NSURLSession sharedSession];
-    NSString *urlAsString = [NSString stringWithFormat:@"http://feature-code-test.skylark-cms.qa.aws.ostmodern.co.uk:8000/api/%@/", paramEndPoint];
-    NSURL * url = [NSURL URLWithString:urlAsString];
-    NSMutableURLRequest * urlRequest = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:30.0]; // 30 seconds time out
-    [urlRequest setHTTPMethod:@"GET"];
-    
-    dataTask = [session dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-        NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-        NSLog(@"Dictionary: %@", dictionary);
-
-    }];
-    
-    [dataTask resume];
-}
+//-(void)getDataWithEndPoint:(NSString*)paramEndPoint
+//{
+//    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+//    
+//    NSURLSession * session = [NSURLSession sharedSession];
+//    NSString *urlAsString = [NSString stringWithFormat:@"http://feature-code-test.skylark-cms.qa.aws.ostmodern.co.uk:8000/api/%@/", paramEndPoint];
+//    NSURL * url = [NSURL URLWithString:urlAsString];
+//    NSMutableURLRequest * urlRequest = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:30.0]; // 30 seconds time out
+//    [urlRequest setHTTPMethod:@"GET"];
+//    
+//    dataTask = [session dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+//        [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+//        NSDictionary *dictionary = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+//        NSLog(@"Dictionary: %@", dictionary);
+//
+//    }];
+//    
+//    [dataTask resume];
+//}
 
 -(IBAction)btnGetEpisodes:(UIButton*)sender
 {
     arrEpisodes =[[NSMutableArray alloc]initWithArray:(NSArray*)[arrContents objectAtIndex:sender.tag][@"items"]];
-//    [self.getRequestObject getDataWithEndPoint:@"" withCompletionBlock:^(id json, NSError *error) {
-//        
-//    }];
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     EpisodeViewController *evc = (EpisodeViewController*)segue.destinationViewController;
     [evc setArrEpisodes:arrEpisodes];
+}
+
+-(void)blurViewUsingView:(UIView*)paramView
+{
+    paramView.backgroundColor = [UIColor clearColor];
+    UIBlurEffect *blurEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
+    UIVisualEffectView *blurEffectView = [[UIVisualEffectView alloc] initWithEffect:blurEffect];
+    blurEffectView.frame = paramView.bounds;
+    blurEffectView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    
+    [paramView addSubview:blurEffectView];
+    [paramView sendSubviewToBack:blurEffectView];
+    
+    [paramView setHidden:NO];
+    [paramView setFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.frame), CGRectGetHeight(self.view.frame))];
 }
 
 @end

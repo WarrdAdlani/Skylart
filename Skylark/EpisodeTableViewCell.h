@@ -12,4 +12,5 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *imgEpisodeImage;
 
+@property (weak, nonatomic) IBOutlet UILabel *lblTitle;
 @end
