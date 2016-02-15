@@ -16,6 +16,7 @@
     NSMutableArray *arrTitles;
     NSOperationQueue *downloadQueue;
     UIView *loadingView;
+    UILabel *loadingLabel;
 }
 
 @end
@@ -33,16 +34,6 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    loadingView = [[UIView alloc]initWithFrame:self.view.bounds];
-    [loadingView setTranslatesAutoresizingMaskIntoConstraints:YES];
-    UILabel *loadingLabel = [[UILabel alloc]initWithFrame:loadingView.bounds];
-    [loadingLabel setTextAlignment:NSTextAlignmentCenter];
-    [loadingLabel setNumberOfLines:0];
-    [loadingLabel setTextColor:[UIColor whiteColor]];
-    [loadingLabel setTranslatesAutoresizingMaskIntoConstraints:YES];
-    [loadingView addSubview:loadingLabel];
-    [self blurViewUsingView:loadingView];
-    
     getRequest = [[GETRequestClass alloc]init];
     
     NSLog(@"Episode array: %@", self.arrEpisodes);
@@ -54,6 +45,21 @@
     }
     
     downloadQueue = [[NSOperationQueue alloc]init];
+}
+
+-(void)viewDidLayoutSubviews
+{
+    loadingView = [[UIView alloc]initWithFrame:self.view.bounds];
+    [loadingView setTranslatesAutoresizingMaskIntoConstraints:YES];
+    loadingLabel = [[UILabel alloc]initWithFrame:loadingView.bounds];
+    [loadingLabel setText:@"Downloading data.\nPlease wait..."];
+    [loadingLabel setTextAlignment:NSTextAlignmentJustified];
+    [loadingLabel setNumberOfLines:0];
+    [loadingLabel setTextColor:[UIColor whiteColor]];
+    [loadingLabel setTranslatesAutoresizingMaskIntoConstraints:YES];
+    [loadingView addSubview:loadingLabel];
+    [loadingView bringSubviewToFront:loadingLabel];
+    [self blurViewUsingView:loadingView];
 }
 
 - (void)didReceiveMemoryWarning {
