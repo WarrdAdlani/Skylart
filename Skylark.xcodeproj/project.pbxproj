@@ -1,0 +1,350 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F361E0091C71F95800825526 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F361E0081C71F95800825526 /* main.m */; };
+		F361E00C1C71F95800825526 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F361E00B1C71F95800825526 /* AppDelegate.m */; };
+		F361E00F1C71F95800825526 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F361E00E1C71F95800825526 /* ViewController.m */; };
+		F361E0121C71F95800825526 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F361E0101C71F95800825526 /* Main.storyboard */; };
+		F361E0151C71F95800825526 /* Skylark.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F361E0131C71F95800825526 /* Skylark.xcdatamodeld */; };
+		F361E0171C71F95800825526 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F361E0161C71F95800825526 /* Assets.xcassets */; };
+		F361E01A1C71F95800825526 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F361E0181C71F95800825526 /* LaunchScreen.storyboard */; };
+		F361E0231C72009C00825526 /* GETRequestClass.m in Sources */ = {isa = PBXBuildFile; fileRef = F361E0221C72009C00825526 /* GETRequestClass.m */; };
+		F361E0261C72106200825526 /* FeaturesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F361E0251C72106200825526 /* FeaturesTableViewCell.m */; };
+		F361E0291C7225B400825526 /* EpisodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F361E0281C7225B400825526 /* EpisodeViewController.m */; };
+		F361E02C1C72262E00825526 /* EpisodeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F361E02B1C72262E00825526 /* EpisodeTableViewCell.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F361E0041C71F95800825526 /* Skylark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Skylark.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F361E0081C71F95800825526 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F361E00A1C71F95800825526 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F361E00B1C71F95800825526 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F361E00D1C71F95800825526 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		F361E00E1C71F95800825526 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F361E0111C71F95800825526 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F361E0141C71F95800825526 /* Skylark.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Skylark.xcdatamodel; sourceTree = "<group>"; };
+		F361E0161C71F95800825526 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F361E0191C71F95800825526 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F361E01B1C71F95800825526 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F361E0211C72009C00825526 /* GETRequestClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GETRequestClass.h; sourceTree = "<group>"; };
+		F361E0221C72009C00825526 /* GETRequestClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GETRequestClass.m; sourceTree = "<group>"; };
+		F361E0241C72106200825526 /* FeaturesTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeaturesTableViewCell.h; sourceTree = "<group>"; };
+		F361E0251C72106200825526 /* FeaturesTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeaturesTableViewCell.m; sourceTree = "<group>"; };
+		F361E0271C7225B400825526 /* EpisodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EpisodeViewController.h; sourceTree = "<group>"; };
+		F361E0281C7225B400825526 /* EpisodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EpisodeViewController.m; sourceTree = "<group>"; };
+		F361E02A1C72262E00825526 /* EpisodeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EpisodeTableViewCell.h; sourceTree = "<group>"; };
+		F361E02B1C72262E00825526 /* EpisodeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EpisodeTableViewCell.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F361E0011C71F95800825526 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F361DFFB1C71F95800825526 = {
+			isa = PBXGroup;
+			children = (
+				F361E0061C71F95800825526 /* Skylark */,
+				F361E0051C71F95800825526 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F361E0051C71F95800825526 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F361E0041C71F95800825526 /* Skylark.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F361E0061C71F95800825526 /* Skylark */ = {
+			isa = PBXGroup;
+			children = (
+				F361E00A1C71F95800825526 /* AppDelegate.h */,
+				F361E00B1C71F95800825526 /* AppDelegate.m */,
+				F361E00D1C71F95800825526 /* ViewController.h */,
+				F361E00E1C71F95800825526 /* ViewController.m */,
+				F361E0241C72106200825526 /* FeaturesTableViewCell.h */,
+				F361E0251C72106200825526 /* FeaturesTableViewCell.m */,
+				F361E0271C7225B400825526 /* EpisodeViewController.h */,
+				F361E0281C7225B400825526 /* EpisodeViewController.m */,
+				F361E02A1C72262E00825526 /* EpisodeTableViewCell.h */,
+				F361E02B1C72262E00825526 /* EpisodeTableViewCell.m */,
+				F361E0211C72009C00825526 /* GETRequestClass.h */,
+				F361E0221C72009C00825526 /* GETRequestClass.m */,
+				F361E0101C71F95800825526 /* Main.storyboard */,
+				F361E0161C71F95800825526 /* Assets.xcassets */,
+				F361E0181C71F95800825526 /* LaunchScreen.storyboard */,
+				F361E01B1C71F95800825526 /* Info.plist */,
+				F361E0131C71F95800825526 /* Skylark.xcdatamodeld */,
+				F361E0071C71F95800825526 /* Supporting Files */,
+			);
+			path = Skylark;
+			sourceTree = "<group>";
+		};
+		F361E0071C71F95800825526 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F361E0081C71F95800825526 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F361E0031C71F95800825526 /* Skylark */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F361E01E1C71F95800825526 /* Build configuration list for PBXNativeTarget "Skylark" */;
+			buildPhases = (
+				F361E0001C71F95800825526 /* Sources */,
+				F361E0011C71F95800825526 /* Frameworks */,
+				F361E0021C71F95800825526 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Skylark;
+			productName = Skylark;
+			productReference = F361E0041C71F95800825526 /* Skylark.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F361DFFC1C71F95800825526 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Warrd Adlani";
+				TargetAttributes = {
+					F361E0031C71F95800825526 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+				};
+			};
+			buildConfigurationList = F361DFFF1C71F95800825526 /* Build configuration list for PBXProject "Skylark" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F361DFFB1C71F95800825526;
+			productRefGroup = F361E0051C71F95800825526 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F361E0031C71F95800825526 /* Skylark */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F361E0021C71F95800825526 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F361E01A1C71F95800825526 /* LaunchScreen.storyboard in Resources */,
+				F361E0171C71F95800825526 /* Assets.xcassets in Resources */,
+				F361E0121C71F95800825526 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F361E0001C71F95800825526 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F361E0231C72009C00825526 /* GETRequestClass.m in Sources */,
+				F361E00F1C71F95800825526 /* ViewController.m in Sources */,
+				F361E0261C72106200825526 /* FeaturesTableViewCell.m in Sources */,
+				F361E0291C7225B400825526 /* EpisodeViewController.m in Sources */,
+				F361E0151C71F95800825526 /* Skylark.xcdatamodeld in Sources */,
+				F361E02C1C72262E00825526 /* EpisodeTableViewCell.m in Sources */,
+				F361E00C1C71F95800825526 /* AppDelegate.m in Sources */,
+				F361E0091C71F95800825526 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F361E0101C71F95800825526 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F361E0111C71F95800825526 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F361E0181C71F95800825526 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F361E0191C71F95800825526 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F361E01C1C71F95800825526 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F361E01D1C71F95800825526 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F361E01F1C71F95800825526 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Skylark/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = wa.Skylark;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F361E0201C71F95800825526 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Skylark/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = wa.Skylark;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F361DFFF1C71F95800825526 /* Build configuration list for PBXProject "Skylark" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F361E01C1C71F95800825526 /* Debug */,
+				F361E01D1C71F95800825526 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F361E01E1C71F95800825526 /* Build configuration list for PBXNativeTarget "Skylark" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F361E01F1C71F95800825526 /* Debug */,
+				F361E0201C71F95800825526 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F361E0131C71F95800825526 /* Skylark.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F361E0141C71F95800825526 /* Skylark.xcdatamodel */,
+			);
+			currentVersion = F361E0141C71F95800825526 /* Skylark.xcdatamodel */;
+			path = Skylark.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = F361DFFC1C71F95800825526 /* Project object */;
+}
